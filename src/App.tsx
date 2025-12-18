@@ -82,12 +82,11 @@ function App() {
   }, []);
 
   useEffect(() => {
-    setLoading(true);
     axios
       .get("https://openapiv1.coinstats.app/coins?currency=IDR", {
         headers: {
           accept: "application/json",
-          "X-API-KEY": "AZWaeZc15DM4jlf5pfyn89QeTJOPi1VGkr2etOEFjt8=",
+          "X-API-KEY": import.meta.env.VITE_XAIKEY || "",
         },
       })
       .then((res) => {
@@ -97,7 +96,8 @@ function App() {
       .catch((error: Error) => {
         console.error(error);
         setLoading(false);
-      });
+      })
+      .finally(() => setLoading(false));
   }, []);
 
   const handleSort = (field: SortField) => {

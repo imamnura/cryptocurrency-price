@@ -1,24 +1,144 @@
-# Logs
-logs
-*.log
+# ==========================================================
+# NODE / NEXT / TYPESCRIPT / STORYBOOK / VITEST PROJECT
+# ==========================================================
+
+# Node
+node_modules/
 npm-debug.log*
+pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+package-lock.json
+.pnpm-store/
 
-node_modules
-dist
-dist-ssr
-*.local
+# Environment variables
+.env
+.env.*
+!.env.example
 
-# Editor directories and files
+# Build output
+.next/
+out/
+dist/
+build/
+storybook-static/
+coverage/
+
+# Vitest & Jest
+.vitest/
+*.lcov
+
+# Storybook cache & build
+.storybook-out/
+.storybook-cache/
+sb-static/
+# Storybook local preview cache
+.storybook/*.mdx.ts
+.storybook/manager-cache.json
+
+# TypeScript
+*.tsbuildinfo
+tsconfig.tsbuildinfo
+
+# IDE / Editor junk
 .vscode/*
+!.vscode/settings.json
 !.vscode/extensions.json
-.idea
-.DS_Store
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+*.DS_Store
+Thumbs.db
+
+# OS temp
+.DS_Store
+Icon?
+ehthumbs.db
+desktop.ini
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+*.stackdump
+
+# Local DB / Mock / Cache
+*.sqlite
+*.db
+cache/
+.tmp/
+temp/
+__cache__/
+
+# Coverage
+coverage/
+lcov-report/
+
+# Test outputs
+test-results/
+*.test.js.map
+
+# Next.js specific
+.vercel/
+.next/
+out/
+server/
+public/static/
+
+# Storybook related temp
+storybook-static/
+.storybook-out/
+*.stories.js.snap
+
+# Tailwind CSS build artifacts
+*.css.map
+postcss.config.js.map
+
+# Miscellaneous
+*.bak
+*.old
+*.orig
+*.rej
+*~
+*.tmp
+*.swp
+*.lock
+
+# ==========================================================
+# CUSTOM: LOCAL FILES
+# ==========================================================
+# drafts / local json mocks
+drafts/
+mock-data/
+local-only/
+*.local.json
+*.local.ts
+
+# ==========================================================
+# GENERATED DOCS
+# ==========================================================
+# Storybook docs output
+docs-build/
+docs-static/
+docs/
+
+# ==========================================================
+# OS Specific
+# ==========================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+# Windows
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# ==========================================================
+# END
+# ==========================================================
